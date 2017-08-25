@@ -5,7 +5,7 @@ var express = require('express'),
     dust = require('dustjs-helpers'),
     pg = require('pg'),
     dbConfig = require('./config/db'),
-    db = require('./db_connection'),
+    db = require('./data_access_layer/config/db_config'),
     session = require('express-session'),
     cookieParser = require('cookie-parser'),
     exphbs = require('express-handlebars'),
@@ -14,8 +14,9 @@ var express = require('express'),
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy;
 
-    var routes = require('./routes/index');
-    var users = require('./routes/users');
+    /*var routes = require('./routes/index');
+    var users = require('./routes/users');*/
+
     //Inip app
     var app = express();
 
@@ -73,9 +74,15 @@ var express = require('express'),
         res.locals.user = req.user || null;
         next();
     });
+    // Define routes.
+    app.use('/', require('./routes'));
 
-    app.use('/', routes);
-    app.use('/users', users);
+    //Auth router
+    app.use('/login', require('./routes/auth/login'));
+    app.use('/register', require('./routes/auth/register'));
+    app.use('/forgot', require('./routes/auth/forgot'));
+    app.use('/logout', require('./routes/auth/logout'));
+    app.use('/', require('./routes/auth/reset'));
 
     //Server
     app.listen(dbConfig.server_port, function(req, res) {

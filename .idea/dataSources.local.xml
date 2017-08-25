@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - recipebookdb@localhost" uuid="eb146c27-b413-431b-8ca5-021efab857e2">
+      <secret-storage>master_key</secret-storage>
+      <user-name>eduonix</user-name>
+      <schema-pattern>recipebookdb.pg_catalog recipebookdb.public</schema-pattern>
+      <default-schemas>recipebookdb.pg_catalog recipebookdb.public</default-schemas>
+    </data-source>
+  </component>
+</project>
