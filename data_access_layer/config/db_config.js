@@ -10,6 +10,14 @@ const connection = new Sequelize(dbConfig.database, dbConfig.user, dbConfig.pass
         idle: 10000
     }
 });
+/*connection.sync()
+    .then(() => {
+        console.log('Sync successfully.');
+    })
+    .catch(err => {
+        console.error('Sync faily:', err);
+    });*/
+
 connection
     .authenticate()
     .then(() => {

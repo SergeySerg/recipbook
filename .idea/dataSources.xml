@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2899201974">
+  <component name="DataSourceManagerImpl" format="xml" hash="2934442992">
     <data-source source="LOCAL" name="PostgreSQL - recipebookdb@localhost" uuid="eb146c27-b413-431b-8ca5-021efab857e2">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>

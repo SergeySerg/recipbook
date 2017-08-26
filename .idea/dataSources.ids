@@ -1415,21 +1415,6 @@
       <primary-key name="recipes_pkey" columns="id"/>
     </table>
     <table name="recipes_id_seq" schema="public" catalog="recipebookdb" type="SEQUENCE"/>
-    <table name="users" schema="public" catalog="recipebookdb" type="TABLE">
-      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgndXNlcnNfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
-      <column name="phone" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="email" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="name" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="city" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="login" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="password" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="active" sqlType="bool" precision="1" scale="0" nullable="true" jdbcType="-7" def="dHJ1ZQ=="/>
-      <column name="createdAt" sqlType="timestamptz" precision="35" scale="6" nullable="false" jdbcType="93"/>
-      <column name="updatedAt" sqlType="timestamptz" precision="35" scale="6" nullable="false" jdbcType="93"/>
-      <column name="resetpasswordtoken" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="resetpasswordexpires" sqlType="timestamptz" precision="35" scale="6" nullable="true" jdbcType="93"/>
-      <primary-key name="users_pkey" columns="id"/>
-    </table>
     <table name="users_id_seq" schema="public" catalog="recipebookdb" type="SEQUENCE"/>
     <procedure name="RI_FKey_cascade_del" schema="pg_catalog" catalog="recipebookdb" type="2" remarks="cmVmZXJlbnRpYWwgaW50ZWdyaXR5IE9OIERFTEVURSBDQVNDQURF">
       <prototype>
